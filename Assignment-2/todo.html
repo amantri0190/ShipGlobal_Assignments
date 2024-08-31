@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board with Arrow Navigation</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+    <!-- This is the outer container for Adding Task section -->
+    <div class="add_task_container">
+        <h2>Add Your Tasks</h2>
+        <input type="text" id="taskName" placeholder="Enter task name">
+        <select id="taskStatus">
+            <option value="backlog">Backlog</option>
+            <option value="todo">To Do</option>
+            <option value="ongoing">Ongoing</option>
+            <option value="done">Done</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    <!-- This is the main container conatining 4 divs -->
+    <div class="main_container">
+        <div class="inner_container" id="backlog">
+            <h2>Backlog</h2>
+            <div class="task-list"></div>
+        </div>
+        <div class="inner_container" id="todo">
+            <h2>To Do</h2>
+            <div class="task-list"></div>
+        </div>
+        <div class="inner_container" id="ongoing">
+            <h2>Ongoing</h2>
+            <div class="task-list"></div>
+        </div>
+        <div class="inner_container" id="done">
+            <h2>Done</h2>
+            <div class="task-list"></div>
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+
+</html>
